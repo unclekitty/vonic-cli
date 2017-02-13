@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+'use strict';
+
+process.title = 'vonic';
+
+console.log('hello vonic');
+
+var VonicCli = require('../lib/cli');
+
+VonicCli.run(process.argv).catch(function(err){
+  console.error('Caught exception:\n', err.stack, '\n\nMind letting us know?');
+});
